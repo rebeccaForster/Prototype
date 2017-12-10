@@ -1,0 +1,592 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>IPP Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+
+    <!-- Normalize JS -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <!-- Dashboard Page -->
+    <div data-role="page" id="home">
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-fullscreen="false">
+
+            <a href="#sidepanel1" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext"></a>
+            <img id="logo" src="images/icons-png/zhs.png" alt="ZHS">
+            <h1>ZHS</h1>
+        </div>
+        <!-- content -->
+        <div role="main" class="ui-content">
+
+            <div class="item">
+                <span class="datum"> 12 </span>
+                <span class="name">Today, Swimming</span>
+                <span class="price">November, 4.00 - 5.00 pm</span>
+            </div>
+
+            <div class="item">
+                <span class="datum"> 16 </span>
+                <span class="name">Monday, Fitness</span>
+                <span class="price">November, 3.00 - 5.00 pm</span>
+            </div>
+
+            <div class="item">
+                <span class="datum"> 19 </span>
+                <span class="name">Thursday, Swimming</span>
+                <span class="price">November, 4.00 - 5.00 pm</span>
+            </div>
+
+            <div class="item">
+                <span class="datum"> 23 </span>
+                <span class="name">Monday, Fitness</span>
+                <span class="price">November, 3.00 - 5.00 pm</span>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-fullscreen="false">
+            <div data-role="footer-navigation"></div>
+        </div>
+        <!-- sidepanel -->
+        <div data-role="panel" id="sidepanel1" data-position="right" data-display="overlay">
+            <div data-role="header">
+                <a href="#sidepanel1" class="ui-btn ui-btn-right ui-icon-delete ui-btn-icon-notext"></a>
+                <h1></h1>
+            </div>
+            <div class="ui-panel-inner">
+                <ul data-role="listview">
+                    <li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#sportID" class="ui-btn ui-icon-user ui-btn-icon-left">ID</a></li>
+                    <li><a href="#courses" class="ui-btn ui-icon-search ui-btn-icon-left">Search Courses</a></li>
+                    <li><a href="#myCourses" class="ui-btn ui-icon-bullets ui-btn-icon-left">My Courses</a></li>
+                    <li><a href="#directions" class="ui-btn ui-icon-navigation ui-btn-icon-left">Directions</a></li>
+                    <li><a href="#bulletinBoard" class="ui-btn ui-icon-comment ui-btn-icon-left">Bulletin Board</a></li>
+                    <li><a href="#settings" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a></li>
+                    <li><a href="#faq" class="ui-btn ui-icon-myicon ui-btn-icon-left">FAQs</a></li>
+                    <li><a href="#impressum" class="ui-btn ui-icon-info ui-btn-icon-left">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--sportID Page -->
+    <div data-role="page" id="sportID">
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-fullscreen="false">
+            <a href="#sidepanel2" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext"></a>
+            <a href="#" onclick="goBack()" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-notext"></a>
+            <h1>ID</h1>
+        </div>
+
+        <!-- content -->
+        <div role="main" class="ui-content">
+
+            <div id="photoId">
+                <img id="persona" src="images/susanne.jpg" alt="Michelle Oppermann">
+                <span id="personaInfo">
+                    <h3>Michelle </h3>
+                    <h3>Oppermann</h3>
+                    <h4>LMU</h4>
+                </span>
+            </div>
+
+            <div id="boxtickets">
+                <div>
+                    <span class="boxbooked boxleft">H</span>
+                    <span class="boxbooked boxright">S</span>
+                </div>
+
+                <div>
+                    <span class="boxnotbooked boxleft">F</span>
+                    <span class="boxnotbooked boxright">K</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-fullscreen="false">
+            <div data-role="footer-navigation"></div>
+        </div>
+        <!-- sidepanel -->
+        <div data-role="panel" id="sidepanel2" data-position="right" data-display="overlay">
+            <div data-role="header">
+                <a href="#sidepanel2" class="ui-btn ui-btn-right ui-icon-delete ui-btn-icon-notext"></a>
+                <h1></h1>
+            </div>
+            <div class="ui-panel-inner">
+                <ul data-role="listview">
+                    <li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#sportID" class="ui-btn ui-icon-user ui-btn-icon-left">ID</a></li>
+                    <li><a href="#courses" class="ui-btn ui-icon-search ui-btn-icon-left">Courses</a></li>
+                    <li><a href="#myCourses" class="ui-btn ui-icon-bullets ui-btn-icon-left">My Courses</a></li>
+                    <li><a href="#directions" class="ui-btn ui-icon-navigation ui-btn-icon-left">Directions</a></li>
+                    <li><a href="#bulletinBoard" class="ui-btn ui-icon-comment ui-btn-icon-left">Bulletin Board</a></li>
+                    <li><a href="#settings" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a></li>
+                    <li><a href="#faq" class="ui-btn ui-icon-myicon ui-btn-icon-left">FAQs</a></li>
+                    <li><a href="#impressum" class="ui-btn ui-icon-info ui-btn-icon-left">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- courses Page-->
+    <div data-role="page" id="courses">
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-fullscreen="false">
+            <a href="#sidepanel3" onclick="openMenu()" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext"></a>
+            <a href="#" onclick="goBack()" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-notext"></a>
+            <h1>Courses</h1>
+        </div>
+
+        <!-- content -->
+        <div role="main" class="ui-content">
+            <div data-role="tabs">
+                <div data-role="navbar" id="coursesTab">
+                    <ul>
+                        <li><a href="#muenchen" class="ui-btn-active ui-state-persist">München</a></li>
+                        <li><a href="#freising">Freising</a></li>
+                        <li><a href="#landshut">Landshut</a></li>
+                    </ul>
+                </div>
+                <!-- content muenchen-->
+                <div id="muenchen">
+                    <ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
+                        <li><a href="#">Arobic</a></li>
+                        <li><a href="#myCoursesPanel" onclick="startMyCoursePanel()">Fitness</a></li>
+                        <li><a href="#">Swimming</a></li>
+                    </ul>
+                </div>
+
+                <!-- content freising-->
+                <div id="freising">
+
+
+                </div>
+
+                <!-- content landshut-->
+                <div id="landshut">
+
+                </div>
+            </div>
+            <!-- sidepanel -->
+            <div data-role="panel" id="sidepanel3" data-position="right" data-display="overlay">
+                <div data-role="header">
+                    <a href="#sidepanel3" class="ui-btn ui-btn-right ui-icon-delete ui-btn-icon-notext"></a>
+                    <h1></h1>
+                </div>
+                <div class="ui-panel-inner">
+                    <ul data-role="listview">
+                        <li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                        <li><a href="#sportID" class="ui-btn ui-icon-user ui-btn-icon-left">ID</a></li>
+                        <li><a href="#courses" class="ui-btn ui-icon-search ui-btn-icon-left">Courses</a></li>
+                        <li><a href="#myCourses" class="ui-btn ui-icon-bullets ui-btn-icon-left">My Courses</a></li>
+                        <li><a href="#directions" class="ui-btn ui-icon-navigation ui-btn-icon-left">Directions</a></li>
+                        <li><a href="#bulletinBoard" class="ui-btn ui-icon-comment ui-btn-icon-left">Bulletin Board</a></li>
+                        <li><a href="#settings" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a></li>
+                        <li><a href="#faq" class="ui-btn ui-icon-myicon ui-btn-icon-left">FAQs</a></li>
+                        <li><a href="#impressum" class="ui-btn ui-icon-info ui-btn-icon-left">Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-fullscreen="false">
+            <div data-role="footer-navigation"></div>
+        </div>
+    </div>
+
+    <!-- My courses Page-->
+    <div data-role="page" id="myCourses">
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-fullscreen="false">
+            <a href="#sidepanel4" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext"></a>
+            <a href="#" onclick="goBack()" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-notext"></a>
+            <h1>My Courses</h1>
+        </div>
+
+        <!-- content -->
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
+                <li><a href="#myCoursesPanel" onclick="startMyCoursePanel()">Fitness</a></li>
+
+                <li><a href="#">Swimming</a></li>
+            </ul>
+        </div>
+
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-fullscreen="false">
+            <div data-role="footer-navigation"></div>
+        </div>
+        <!-- sidepanel -->
+        <div data-role="panel" id="sidepanel4" data-position="right" data-display="overlay">
+            <div data-role="header">
+                <a href="#sidepanel4" class="ui-btn ui-btn-right ui-icon-delete ui-btn-icon-notext"></a>
+                <h1></h1>
+            </div>
+            <div class="ui-panel-inner">
+                <ul data-role="listview">
+                    <li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#sportID" class="ui-btn ui-icon-user ui-btn-icon-left">ID</a></li>
+                    <li><a href="#courses" class="ui-btn ui-icon-search ui-btn-icon-left">Courses</a></li>
+                    <li><a href="#myCourses" class="ui-btn ui-icon-bullets ui-btn-icon-left">My Courses</a></li>
+                    <li><a href="#directions" class="ui-btn ui-icon-navigation ui-btn-icon-left">Directions</a></li>
+                    <li><a href="#bulletinBoard" class="ui-btn ui-icon-comment ui-btn-icon-left">Bulletin Board</a></li>
+                    <li><a href="#settings" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a></li>
+                    <li><a href="#faq" class="ui-btn ui-icon-myicon ui-btn-icon-left">FAQs</a></li>
+                    <li><a href="#impressum" class="ui-btn ui-icon-info ui-btn-icon-left">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--my courses Panel Page -->
+    <div data-role="page" id="myCoursesPanel">
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-fullscreen="false">
+            <a href="#sidepanel5" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext"></a>
+            <a href="#" onclick="goBack()" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-notext"></a>
+            <h1>Fitness</h1>
+        </div>
+
+        <!-- content -->
+        <div role="main" class="ui-content">
+            <div data-role="tabs" data-fullscreen="false">
+                <div data-role="navbar" id="myCoursesTab" data-position="fixed">
+                    <ul>
+                        <li><a href="#myCoursesInfo" onclick="info()" class="ui-btn-active ">Info</a></li>
+                        <li><a href="#myCoursesDate" onclick="date()">Schedule</a></li>
+                        <li><a href="#myCoursesPlace" onclick="startPlace()">Place</a></li>
+                    </ul>
+                </div>
+                <!-- content Info-->
+                <div id="myCoursesInfo" class="main-content">
+                    <div data-role="collapsibleset" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-theme="a" data-content-theme="a">
+                        <div data-role="collapsible">
+                            <h3>Description</h3>
+                            <p><span class="infotext">Info:</span> A versatile and varied fitness training with running, strengthening and mobility elements. Rhythmic support through music.
+                                <br> <span class="infotext">Equipment:</span> Please bring a towel.
+                                <br> <span class="infotext">Registered people:</span> 2/25
+                            </p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3>Prerequisites</h3>
+                            <p><span class="infotext">Required Qualifications:</span> None
+                                <br><span class="infotext">Required Ticket:</span> H </p>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3>Teacher</h3>
+                            <ul>
+                                <li><img id="teacher" src="images/PT.jpg" alt="Sina Lender"> Sina Lender (27)</li>
+                            </ul>
+                            <span class="infotext">Further courses:</span> Bodystyling, Aerobic  </p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- content Date-->
+                <div id="myCoursesDate" class="main-content">
+
+                    <div class="item">
+                        <span class="datum"> 16 </span>
+                        <span class="name">Monday</span>
+                        <span class="price">November, 3.00 - 5.00 pm</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="datum"> 23 </span>
+                        <span class="name">Monday</span>
+                        <span class="price">November, 3.00 - 5.00 pm</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="datum"> 30 </span>
+                        <span class="name">Monday</span>
+                        <span class="price">November, 3.00 - 5.00 pm</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="datum"> 7 </span>
+                        <span class="name">Monday</span>
+                        <span class="price">December, 3.00 - 5.00 pm</span>
+                    </div>
+                    <div class="item">
+                        <span class="datum"> 14 </span>
+                        <span class="name">Monday</span>
+                        <span class="price">December, 3.00 - 5.00 pm</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="datum"> 21 </span>
+                        <span class="name">Monday</span>
+                        <span class="price">December, 3.00 - 5.00 pm</span>
+                    </div>
+
+                </div>
+
+                <!-- content Place-->
+                <div id="myCoursesPlace" class="main-content">
+                    <h3>ZHS Campus</h3>
+                    <p>Gymnastic
+                        <br> 1st floor</p>
+                    <img id="place" src="images/ZHS_Hallenplan-TU-Campus-Muenchen.jpg" alt="Place">
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-fullscreen="false">
+            <a href="#" id="btnMyCourses" onclick="footerMyCourses()" class="button ui-btn">Deregister</a>
+            <div data-role="footer-navigation"></div>
+        </div>
+        <!-- sidepanel -->
+        <div data-role="panel" id="sidepanel5" data-position="right" data-display="overlay">
+            <div data-role="header">
+                <a href="#sidepanel5" class="ui-btn ui-btn-right ui-icon-delete ui-btn-icon-notext"></a>
+                <h1></h1>
+            </div>
+            <div class="ui-panel-inner">
+                <ul data-role="listview">
+                    <li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#sportID" class="ui-btn ui-icon-user ui-btn-icon-left">ID</a></li>
+                    <li><a href="#courses" class="ui-btn ui-icon-search ui-btn-icon-left">Courses</a></li>
+                    <li><a href="#myCourses" class="ui-btn ui-icon-bullets ui-btn-icon-left">My Courses</a></li>
+                    <li><a href="#directions" class="ui-btn ui-icon-navigation ui-btn-icon-left">Directions</a></li>
+                    <li><a href="#bulletinBoard" class="ui-btn ui-icon-comment ui-btn-icon-left">Bulletin Board</a></li>
+                    <li><a href="#settings" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a></li>
+                    <li><a href="#faq" class="ui-btn ui-icon-myicon ui-btn-icon-left">FAQs</a></li>
+                    <li><a href="#impressum" class="ui-btn ui-icon-info ui-btn-icon-left">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- directions Page-->
+    <div data-role="page" id="directions">
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-fullscreen="false">
+            <h1>Directions</h1>
+            <a href="#sidepanel6" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext"></a>
+            <a href="#" onclick="goBack()" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-notext"></a>
+        </div>
+
+        <!-- content -->
+        <div role="main" class="ui-content">
+            <div id="content">
+                <img id="way" src="images/icons-png/Anfahrt.png" alt="Anfahrt">
+                <a href="#" id="navi" class="ui-btn ui-icon-navigation ui-btn-icon-left"></a>
+            </div>
+        </div>
+
+        <!-- footer -->
+
+        <div data-role="footer" data-position="fixed" data-fullscreen="false">
+            <a href="#" id="startNavigation" onclick="toggleDirection()" class="button ui-btn">Start Navigation</a>
+            <div data-role="footer-navigation" data-position="fixed"></div>
+        </div>
+        <!-- sidepanel -->
+        <div data-role="panel" id="sidepanel6" data-position="right" data-display="overlay">
+            <div data-role="header">
+                <a href="#sidepanel6" class="ui-btn ui-btn-right ui-icon-delete ui-btn-icon-notext"></a>
+                <h1></h1>
+            </div>
+            <div class="ui-panel-inner">
+                <ul data-role="listview">
+                    <li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#sportID" class="ui-btn ui-icon-user ui-btn-icon-left">ID</a></li>
+                    <li><a href="#courses" class="ui-btn ui-icon-search ui-btn-icon-left">Courses</a></li>
+                    <li><a href="#myCourses" class="ui-btn ui-icon-bullets ui-btn-icon-left">My Courses</a></li>
+                    <li><a href="#directions" class="ui-btn ui-icon-navigation ui-btn-icon-left">Directions</a></li>
+                    <li><a href="#bulletinBoard" class="ui-btn ui-icon-comment ui-btn-icon-left">Bulletin Board</a></li>
+                    <li><a href="#settings" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a></li>
+                    <li><a href="#faq" class="ui-btn ui-icon-myicon ui-btn-icon-left">FAQs</a></li>
+                    <li><a href="#impressum" class="ui-btn ui-icon-info ui-btn-icon-left">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- bulletin board Page -->
+    <div data-role="page" id="bulletinBoard">
+        <!-- header -->
+        <div data-role="header" class="header" data-position="fixed" data-fullscreen="false">
+            <a href="#sidepanel7" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext"></a>
+            <a href="#" onclick="goBack()" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-notext"></a>
+            <h1>Bulletin Board</h1>
+        </div>
+
+        <!-- content -->
+        <div role="main" class="ui-content">
+
+        </div>
+
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-fullscreen="false">
+            <div data-role="footer-navigation"></div>
+        </div>
+        <!-- sidepanel -->
+        <div data-role="panel" id="sidepanel7" data-position="right" data-display="overlay">
+            <div data-role="header">
+                <a href="#sidepanel7" class="ui-btn ui-btn-right ui-icon-delete ui-btn-icon-notext"></a>
+                <h1></h1>
+            </div>
+            <div class="ui-panel-inner">
+                <ul data-role="listview">
+                    <li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#sportID" class="ui-btn ui-icon-user ui-btn-icon-left">ID</a></li>
+                    <li><a href="#courses" class="ui-btn ui-icon-search ui-btn-icon-left">Courses</a></li>
+                    <li><a href="#myCourses" class="ui-btn ui-icon-bullets ui-btn-icon-left">My Courses</a></li>
+                    <li><a href="#directions" class="ui-btn ui-icon-navigation ui-btn-icon-left">Directions</a></li>
+                    <li><a href="#bulletinBoard" class="ui-btn ui-icon-comment ui-btn-icon-left">Bulletin Board</a></li>
+                    <li><a href="#settings" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a></li>
+                    <li><a href="#faq" class="ui-btn ui-icon-myicon ui-btn-icon-left">FAQs</a></li>
+                    <li><a href="#impressum" class="ui-btn ui-icon-info ui-btn-icon-left">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- settings Page -->
+    <div data-role="page" id="settings">
+        <!-- header -->
+        <div data-role="header" class="header" data-position="fixed" data-fullscreen="false">
+            <a href="#sidepanel8" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext"></a>
+            <a href="#" onclick="goBack()" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-notext"></a>
+            <h1>Settings</h1>
+        </div>
+
+        <!-- content -->
+        <div role="main" class="ui-content">
+
+        </div>
+
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-fullscreen="false">
+            <div data-role="footer-navigation"></div>
+        </div>
+        <!-- sidepanel -->
+        <div data-role="panel" id="sidepanel8" data-position="right" data-display="overlay">
+            <div data-role="header">
+                <a href="#sidepanel8" class="ui-btn ui-btn-right ui-icon-delete ui-btn-icon-notext"></a>
+                <h1></h1>
+            </div>
+            <div class="ui-panel-inner">
+                <ul data-role="listview">
+                    <li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#sportID" class="ui-btn ui-icon-user ui-btn-icon-left">ID</a></li>
+                    <li><a href="#courses" class="ui-btn ui-icon-search ui-btn-icon-left">Courses</a></li>
+                    <li><a href="#myCourses" class="ui-btn ui-icon-bullets ui-btn-icon-left">My Courses</a></li>
+                    <li><a href="#directions" class="ui-btn ui-icon-navigation ui-btn-icon-left">Directions</a></li>
+                    <li><a href="#bulletinBoard" class="ui-btn ui-icon-comment ui-btn-icon-left">Bulletin Board</a></li>
+                    <li><a href="#settings" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a></li>
+                    <li><a href="#faq" class="ui-btn ui-icon-myicon ui-btn-icon-left">FAQs</a></li>
+                    <li><a href="#impressum" class="ui-btn ui-icon-info ui-btn-icon-left">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQs Page -->
+    <div data-role="page" id="faq">
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-fullscreen="false">
+            <a href="#sidepanel10" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext"></a>
+            <a href="#" onclick="goBack()" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-notext"></a>
+            <h1>FAQ</h1>
+        </div>
+
+        <!-- content -->
+        <div role="main" class="ui-content">
+
+        </div>
+
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-fullscreen="false">
+            <div data-role="footer-navigation"></div>
+        </div>
+        <!-- sidepanel -->
+        <div data-role="panel" id="sidepanel10" data-position="right" data-display="overlay">
+            <div data-role="header">
+                <a href="#sidepanel10" class="ui-btn ui-btn-right ui-icon-delete ui-btn-icon-notext"></a>
+                <h1></h1>
+            </div>
+            <div class="ui-panel-inner">
+                <ul data-role="listview">
+                    <li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#sportID" class="ui-btn ui-icon-user ui-btn-icon-left">ID</a></li>
+                    <li><a href="#courses" class="ui-btn ui-icon-search ui-btn-icon-left">Courses</a></li>
+                    <li><a href="#myCourses" class="ui-btn ui-icon-bullets ui-btn-icon-left">My Courses</a></li>
+                    <li><a href="#directions" class="ui-btn ui-icon-navigation ui-btn-icon-left">Directions</a></li>
+                    <li><a href="#bulletinBoard" class="ui-btn ui-icon-comment ui-btn-icon-left">Bulletin Board</a></li>
+                    <li><a href="#settings" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a></li>
+                    <li><a href="#faq" class="ui-btn ui-icon-myicon ui-btn-icon-left">FAQs</a></li>
+                    <li><a href="#impressum" class="ui-btn ui-icon-info ui-btn-icon-left">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Impressum Page -->
+    <div data-role="page" id="impressum">
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-fullscreen="false">
+            <a href="#sidepanel9" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext"></a>
+            <a href="#" onclick="goBack()" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-notext"></a>
+            <h1>Impressum</h1>
+        </div>
+
+        <!-- content -->
+        <div role="main" class="ui-content">
+
+        </div>
+
+        <!-- footer -->
+        <div data-role="footer" data-position="fixed" data-fullscreen="false">
+            <div data-role="footer-navigation"></div>
+        </div>
+        <!-- sidepanel -->
+        <div data-role="panel" id="sidepanel9" data-position="right" data-display="overlay">
+            <div data-role="header">
+                <a href="#sidepanel9" class="ui-btn ui-btn-right ui-icon-delete ui-btn-icon-notext"></a>
+                <h1></h1>
+            </div>
+            <div class="ui-panel-inner">
+                <ul data-role="listview">
+                    <li><a href="#home" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a></li>
+                    <li><a href="#sportID" class="ui-btn ui-icon-user ui-btn-icon-left">ID</a></li>
+                    <li><a href="#courses" class="ui-btn ui-icon-search ui-btn-icon-left">Courses</a></li>
+                    <li><a href="#myCourses" class="ui-btn ui-icon-bullets ui-btn-icon-left">My Courses</a></li>
+                    <li><a href="#directions" class="ui-btn ui-icon-navigation ui-btn-icon-left">Directions</a></li>
+                    <li><a href="#bulletinBoard" class="ui-btn ui-icon-comment ui-btn-icon-left">Bulletin Board</a></li>
+                    <li><a href="#settings" class="ui-btn ui-icon-gear ui-btn-icon-left">Settings</a></li>
+                    <li><a href="#faq" class="ui-btn ui-icon-myicon ui-btn-icon-left">FAQs</a></li>
+                    <li><a href="#impressum" class="ui-btn ui-icon-info ui-btn-icon-left">Impressum</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS -->
+    <script src="js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</body>
+
+</html>
